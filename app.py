@@ -188,7 +188,7 @@ def create_feed_tag(feed_id):
 # 모든 피드를 가져오는 엔드포인트
 @app.route('/feeds', methods=['GET'])
 def get_all_feeds():
-    feeds = PlaceFeed.query.all()
+    feeds = PlaceFeed.query.order_by(PlaceFeed.like_count.desc()).all()
     return jsonify([feed.to_json() for feed in feeds]), 200
 
 # 특정 피드를 가져오는 엔드포인트
