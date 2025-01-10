@@ -294,6 +294,8 @@ def action_vr():
 @app.route('/action-vr', methods=['GET'])
 def get_action_vr():
     global vr_action
+    if vr_action is None:
+        return jsonify({'action': 'none', 'id': 0}), 200
     return jsonify(vr_action), 200
 
 @app.route('/action-vr/reset', methods=['POST'])
