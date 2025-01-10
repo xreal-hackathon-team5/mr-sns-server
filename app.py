@@ -282,6 +282,26 @@ def delete_user(user_id):
     db.session.commit()
     return jsonify({'message': 'User deleted successfully'}), 200
 
+vr_action = None
+
+@app.route('/action-vr', methods=['POST'])
+def action_vr():
+    global vr_action
+    data = request.json
+    vr_action = data
+    return jsonify({'message': 'Action VR'}), 200
+
+@app.route('/action-vr', methods=['GET'])
+def get_action_vr():
+    global vr_action
+    return jsonify(vr_action), 200
+
+@app.route('/action-vr/reset', methods=['POST'])
+def reset_action_vr():
+    global vr_action
+    vr_action = None
+    return jsonify({'message': 'Action VR reset'}), 200
+
 def init_db():
     import json
     with open('data.json', 'r') as file:
