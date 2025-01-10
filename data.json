@@ -3,55 +3,55 @@
     {
       "id": 1,
       "username": "올리브영",
-      "profile_image_url": "https://placehold.co/600x400",
+      "profile_image_url": "http://43.200.177.36:5000/public/logo/oliveyoung_logo.jpg",
       "is_sponsor": true
     },
     {
       "id": 2,
       "username": "울프강 스테이크",
-      "profile_image_url": "https://placehold.co/600x400",
+      "profile_image_url": "http://43.200.177.36:5000/public/logo/wolfgang_logo.jpg",
       "is_sponsor": true
     },
     {
       "id": 3,
       "username": "이마트",
-      "profile_image_url": "https://placehold.co/600x400",
+      "profile_image_url": "http://43.200.177.36:5000/public/logo/emart_logo.jpg",
       "is_sponsor": true
     },
     {
       "id": 4,
       "username": "김철수",
-      "profile_image_url": "https://drive.google.com/file/d/1kk7ToSG3lLwaxSxVjjI0rU2VjRTf6H0Y/preview",
+      "profile_image_url": "http://43.200.177.36:5000/public/profile/profile_image_1.jpg",
       "is_sponsor": false
     },
     {
       "id": 5,
       "username": "박영희",
-      "profile_image_url": "https://placehold.co/600x400",
+      "profile_image_url": "http://43.200.177.36:5000/public/profile/profile_image_3.jpg",
       "is_sponsor": false
     },
     {
       "id": 6,
       "username": "이민수",
-      "profile_image_url": "https://placehold.co/600x400",
+      "profile_image_url": "http://43.200.177.36:5000/public/profile/profile_image_8.jpg",
       "is_sponsor": false
     },
     {
       "id": 7,
       "username": "최지은",
-      "profile_image_url": "https://placehold.co/600x400",
+      "profile_image_url": "http://43.200.177.36:5000/public/profile/profile_image_4.jpg",
       "is_sponsor": false
     },
     {
       "id": 8,
       "username": "정우성",
-      "profile_image_url": "https://placehold.co/600x400",
+      "profile_image_url": "http://43.200.177.36:5000/public/profile/profile_image_10.jpg",
       "is_sponsor": false
     },
     {
       "id": 9,
       "username": "한지민",
-      "profile_image_url": "https://placehold.co/600x400",
+      "profile_image_url": "http://43.200.177.36:5000/public/profile/profile_image_7.jpg",
       "is_sponsor": false
     }
   ]

@@ -282,7 +282,23 @@ def delete_user(user_id):
     db.session.commit()
     return jsonify({'message': 'User deleted successfully'}), 200
 
+def init_db():
+    import json
+    with open('data.json', 'r') as file:
+        data = json.load(file)
+    for user in data['users']:
+        new_user = User(
+            id=user['id'],
+            username=user['username'],
+            profile_image_url=user['profile_image_url'],
+            is_sponsor=user['is_sponsor']
+        )
+        db.session.add(new_user)
+    db.session.commit()
+
 if __name__ == '__main__':
     with app.app_context():
+        db.drop_all()
         db.create_all()
+        init_db()
     app.run(host='0.0.0.0', port=5000, debug=True)
