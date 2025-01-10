@@ -42,6 +42,7 @@ class PlaceBubbleTag(db.Model):
     def to_json(self):
         return {
             'id': self.id,
+            'bubble_id': self.bubble_id,
             'content': self.content,
             'is_advertisement': self.is_advertisement,
             'size_level': self.size_level
