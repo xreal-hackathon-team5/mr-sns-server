@@ -171,6 +171,12 @@ def create_feed_tag(feed_id):
     db.session.commit()
     return jsonify(new_tag.to_json()), 201
 
+# 모든 피드를 가져오는 엔드포인트
+@app.route('/feeds', methods=['GET'])
+def get_all_feeds():
+    feeds = PlaceFeed.query.all()
+    return jsonify([feed.to_json() for feed in feeds]), 200
+
 # 특정 피드를 가져오는 엔드포인트
 @app.route('/feeds/<int:feed_id>', methods=['GET'])
 def get_feed_by_id(feed_id):
