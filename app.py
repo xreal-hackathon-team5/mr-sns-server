@@ -183,6 +183,17 @@ def get_feed_by_id(feed_id):
     feed = PlaceFeed.query.get_or_404(feed_id)
     return jsonify(feed.to_json()), 200
 
+@app.route('/feed/<int:feed_id>/like', methods=['POST'])
+def toggle_like_feed(feed_id):
+    feed = PlaceFeed.query.get_or_404(feed_id)
+    if feed.is_liked:
+        feed.like_count -= 1
+    else:
+        feed.like_count += 1
+    feed.is_liked = not feed.is_liked
+    db.session.commit()
+    return jsonify(feed.to_json()), 200
+
 # 특정 피드의 모든 태그를 가져오는 엔드포인트
 @app.route('/feeds/<int:feed_id>/tags', methods=['GET'])
 def get_feed_tags(feed_id):
