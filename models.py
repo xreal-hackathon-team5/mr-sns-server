@@ -26,7 +26,8 @@ class PlaceBubble(db.Model):
             'tags': [tag.to_json() for tag in self.tags],
             'pos_x': self.pos_x,  # Include in JSON representation
             'pos_y': self.pos_y,  # Include in JSON representation
-            'pos_z': self.pos_z   # Include in JSON representation
+            'pos_z': self.pos_z,   # Include in JSON representation
+            'feeds': [feed.to_json() for feed in self.feeds]
         }
 
 class PlaceBubbleTag(db.Model):
