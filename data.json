@@ -532,7 +532,7 @@
     },
     {
       "bubble_id": 3,
-      "user_id": 10,
+      "user_id": 3,
       "content": "이마트에서 다양한 와인을 만나보세요.",
       "media_url": "http://43.200.177.36:5000/public/emart/feed_emart_1.jpg",
       "media_type": "image",
@@ -545,7 +545,7 @@
     },
     {
       "bubble_id": 3,
-      "user_id": 11,
+      "user_id": 3,
       "content": "인기산지 와인 최저가 도전!",
       "media_url": "http://43.200.177.36:5000/public/emart/feed_emart_2.jpg",
       "media_type": "image",
@@ -558,7 +558,7 @@
     },
     {
       "bubble_id": 3,
-      "user_id": 12,
+      "user_id": 3,
       "content": "이마트 와인 장터 3만원 이하 추천",
       "media_url": "http://43.200.177.36:5000/public/emart/feed_emart_3.jpg",
       "media_type": "image",
@@ -571,7 +571,7 @@
     },
     {
       "bubble_id": 3,
-      "user_id": 13,
+      "user_id": 3,
       "content": "이마트에서 특별한 와인 컬렉션을 만나보세요.",
       "media_url": "http://43.200.177.36:5000/public/emart/feed_emart_4.jpg",
       "media_type": "image",
