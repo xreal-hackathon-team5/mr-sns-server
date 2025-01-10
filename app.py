@@ -313,6 +313,25 @@ def init_db():
             size_level=bubble_tag['size_level']
         )
         db.session.add(new_bubble_tag)
+    for feed in data['feeds']:
+        new_feed = PlaceFeed(
+            bubble_id=feed['bubble_id'],
+            user_id=feed['user_id'],
+            content=feed['content'],
+            media_url=feed['media_url'],
+            media_type=feed['media_type'],
+            is_advertisement=feed['is_advertisement'],
+            view_count=feed['view_count'],
+            like_count=feed['like_count'],
+            is_liked=feed['is_liked']
+        )
+        db.session.add(new_feed)
+        for tag in feed['tags']:
+            new_feed_tag = PlaceFeedTag(
+                feed_id=new_feed.id,
+                content=tag
+            )
+            db.session.add(new_feed_tag)
     db.session.commit()
 
 if __name__ == '__main__':
