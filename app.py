@@ -126,7 +126,15 @@ def create_feed(bubble_id):
 @app.route('/bubbles/<int:bubble_id>/feeds', methods=['GET'])
 def get_feeds(bubble_id):
     bubble = PlaceBubble.query.get_or_404(bubble_id)
-    return jsonify([feed.to_json() for feed in bubble.feeds]), 200
+    feeds = sorted(bubble.feeds, key=lambda feed: feed.like_count, reverse=True)
+    return jsonify([feed.to_json() for feed in feeds]), 200
+
+# 특정 버블의 상위 4개 피드를 가져오는 엔드포인트
+@app.route('/bubbles/<int:bubble_id>/feeds/top4', methods=['GET'])
+def get_feed_top4_in_bubble(bubble_id):
+    bubble = PlaceBubble.query.get_or_404(bubble_id)
+    feeds = sorted([feed for feed in bubble.feeds if feed.like_count > 100], key=lambda feed: feed.like_count, reverse=True)
+    return jsonify([feed.to_json() for feed in feeds[:4]]), 200
 
 # 특정 버블의 특정 피드를 가져오는 엔드포인트
 @app.route('/bubbles/<int:bubble_id>/feeds/<int:feed_id>', methods=['GET'])

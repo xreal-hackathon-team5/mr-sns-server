@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "올리브영",
+      "profile_image_url": "https://placehold.co/600x400",
+      "is_sponsor": true
+    }
+  ]
+}
