@@ -326,6 +326,7 @@ def init_db():
             is_liked=feed['is_liked']
         )
         db.session.add(new_feed)
+        db.session.commit()
         for tag in feed['tags']:
             new_feed_tag = PlaceFeedTag(
                 feed_id=new_feed.id,
