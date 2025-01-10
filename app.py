@@ -173,7 +173,7 @@ def create_feed_tag(feed_id):
 
 # 특정 피드를 가져오는 엔드포인트
 @app.route('/feeds/<int:feed_id>', methods=['GET'])
-def get_feed(feed_id):
+def get_feed_by_id(feed_id):
     feed = PlaceFeed.query.get_or_404(feed_id)
     return jsonify(feed.to_json()), 200
 
