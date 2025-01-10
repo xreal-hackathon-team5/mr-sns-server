@@ -294,6 +294,25 @@ def init_db():
             is_sponsor=user['is_sponsor']
         )
         db.session.add(new_user)
+    for bubble in data['bubbles']:
+        new_bubble = PlaceBubble(
+            id=bubble['id'],
+            image_url=bubble['image_url'],
+            title=bubble['title'],
+            size_level=bubble['size_level'],
+            pos_x=bubble['pos_x'],
+            pos_y=bubble['pos_y'],
+            pos_z=bubble['pos_z']
+        )
+        db.session.add(new_bubble)
+    for bubble_tag in data['bubble_tags']:
+        new_bubble_tag = PlaceBubbleTag(
+            bubble_id=bubble_tag['bubble_id'],
+            content=bubble_tag['content'],
+            is_advertisement=bubble_tag['is_advertisement'],
+            size_level=bubble_tag['size_level']
+        )
+        db.session.add(new_bubble_tag)
     db.session.commit()
 
 if __name__ == '__main__':

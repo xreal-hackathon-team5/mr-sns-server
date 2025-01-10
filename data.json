@@ -54,5 +54,102 @@
       "profile_image_url": "http://43.200.177.36:5000/public/profile/profile_image_7.jpg",
       "is_sponsor": false
     }
+  ],
+  "bubbles": [
+    {
+      "id": 1,
+      "image_url": "http://43.200.177.36:5000/public/logo/oliveyoung_logo.jpg",
+      "title": "올리브영",
+      "size_level": 1,
+      "pos_x": 0,
+      "pos_y": 0,
+      "pos_z": 0
+    },
+    {
+      "id": 2,
+      "image_url": "http://43.200.177.36:5000/public/logo/wolfgang_logo.jpg",
+      "title": "울프강 스테이크",
+      "size_level": 3,
+      "pos_x": 0,
+      "pos_y": 0,
+      "pos_z": 0
+    },
+    {
+      "id": 3,
+      "image_url": "http://43.200.177.36:5000/public/logo/emart_logo.jpg",
+      "title": "이마트",
+      "size_level": 2,
+      "pos_x": 0,
+      "pos_y": 0,
+      "pos_z": 0
+    }
+  ],
+  "bubble_tags": [
+    {
+      "bubble_id": 1,
+      "content": "스킨케어 특가 50% 할인",
+      "is_advertisement": true,
+      "size_level": 2
+    },
+    {
+      "bubble_id": 1,
+      "content": "민감성 피부",
+      "is_advertisement": false,
+      "size_level": 2
+    },
+    {
+      "bubble_id": 1,
+      "content": "여드름 케어",
+      "is_advertisement": false,
+      "size_level": 1
+    },
+    {
+      "bubble_id": 2,
+      "content": "데이트장소",
+      "is_advertisement": false,
+      "size_level": 1
+    },
+    {
+      "bubble_id": 2,
+      "content": "주말예약 방문고객 10% 할인",
+      "is_advertisement": true,
+      "size_level": 2
+    },
+    {
+      "bubble_id": 2,
+      "content": "연말파티",
+      "is_advertisement": false,
+      "size_level": 3
+    },
+    {
+      "bubble_id": 2,
+      "content": "뉴욕3대스테이크",
+      "is_advertisement": false,
+      "size_level": 3
+    },
+    {
+      "bubble_id": 2,
+      "content": "신년맞이 50% 할인",
+      "is_advertisement": true,
+      "size_level": 2
+    },
+    {
+      "bubble_id": 3,
+      "content": "와인장터",
+      "is_advertisement": true,
+      "size_level": 2
+    },
+    {
+      "bubble_id": 3,
+      "content": "특가",
+      "is_advertisement": false,
+      "size_level": 1
+    },
+    {
+      "bubble_id": 3,
+      "content": "와인행사",
+      "is_advertisement": false,
+      "size_level": 3
+    }
   ]
 }
