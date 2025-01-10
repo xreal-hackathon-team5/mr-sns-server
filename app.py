@@ -1,10 +1,16 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from models import PlaceBubbleTag, PlaceFeed, PlaceFeedTag, User, db, PlaceBubble
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='public')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///example.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
+
+# Serve static files from the 'public' directory
+@app.route('/public/<path:filename>')
+def serve_public_file(filename):
+    return send_from_directory(app.static_folder, filename)
 
 # 새로운 버블을 생성하는 엔드포인트
 @app.route('/bubbles', methods=['POST'])
