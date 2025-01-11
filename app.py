@@ -197,7 +197,7 @@ def get_feed_by_id(feed_id):
     feed = PlaceFeed.query.get_or_404(feed_id)
     return jsonify(feed.to_json()), 200
 
-@app.route('/feed/<int:feed_id>/like', methods=['POST'])
+@app.route('/feeds/<int:feed_id>/like', methods=['POST'])
 def toggle_like_feed(feed_id):
     feed = PlaceFeed.query.get_or_404(feed_id)
     if feed.is_liked:
