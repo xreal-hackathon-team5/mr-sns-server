@@ -32,7 +32,7 @@ def create_bubble():
 @app.route('/bubbles', methods=['GET'])
 def get_bubbles():
     bubbles = PlaceBubble.query.all()
-    return jsonify([bubble.to_json() for bubble in bubbles]), 200
+    return jsonify({'bubbles': [bubble.to_json() for bubble in bubbles]}), 200
 
 # 특정 ID의 버블을 가져오는 엔드포인트
 @app.route('/bubbles/<int:id>', methods=['GET'])
