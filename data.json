@@ -62,26 +62,26 @@
       "title": "올리브영",
       "size_level": 1,
       "pos_x": 0,
-      "pos_y": 0,
-      "pos_z": 0
+      "pos_y": 1.5,
+      "pos_z": 1
     },
     {
       "id": 2,
       "image_url": "http://43.200.177.36:5000/public/logo/wolfgang_logo.jpg",
       "title": "울프강 스테이크",
       "size_level": 3,
-      "pos_x": 0,
-      "pos_y": 0,
-      "pos_z": 0
+      "pos_x": 1,
+      "pos_y": 1.5,
+      "pos_z": 1
     },
     {
       "id": 3,
       "image_url": "http://43.200.177.36:5000/public/logo/emart_logo.jpg",
       "title": "이마트",
       "size_level": 2,
-      "pos_x": 0,
-      "pos_y": 0,
-      "pos_z": 0
+      "pos_x": -1,
+      "pos_y": 1.5,
+      "pos_z": 1
     }
   ],
   "bubble_tags": [
